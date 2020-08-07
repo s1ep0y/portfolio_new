@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+body {
+    font-family: 'Russo One', sans-serif;
+}
+
+.animtest {
+    width: 100vw;
+    height: 100vh;
+    // background: rgb(240, 240, 240);
+    position: relative;
+}
+
+.centerplacer {
+    width: 200px;
+    height: 280px;
+    // overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: auto;
+    position: absolute;
+    // display: flex;
+    // flex
+    top: 0; left: 0; bottom: 0; right: 0;
+    img {
+        width: 140px;
+        height: auto;
+    }
+}
+
+.centerWrapper{
+    position: relative;
+}
+
+.bg{
+    background-image: url('./../static/img/background/gamepad.svg');
+    content: '';
+    z-index: 3;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 140px;
+    height: 100px;
+}
+
+.hider {
+    transition: all 1s;
+    z-index: 2;
+    position: absolute;
+    border-radius: 40%;
+    content: '';
+    background: white;
+    height: 200px;
+    width: 160px;
+    left: -20px;
+}
+
+.hoverzone {
+    transition: transform 10.1s;
+    width: 180px;
+    height: 140px;
+    position: absolute;
+    top: -110px;
+    left: -20px;
+    // background: yellow;
+    // background: rgba(255, 255, 255, 0);
+    opacity: 0;
+    z-index: 4;
+    content: '';
+}
+
+.hoverzone:hover ~ .hider {
+    // transition: ;
+    // opacity: 0;
+}
+
+.logo {
+    z-index: 1;
+    position: absolute;
+    top: 120px;
+    width: 120px;
+    img {
+        width: 120px;
+        height: auto;
+    }
+}
